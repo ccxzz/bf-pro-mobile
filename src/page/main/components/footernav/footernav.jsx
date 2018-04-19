@@ -28,7 +28,7 @@ class footernav extends React.Component {
         };
         return (
             <div className="footerNav">
-                <Icon/>
+                <Icon style={{display: 'none'}}/>
                 <TabBar
                     unselectedTintColor="#70757E"
                     tintColor="#E7B30D"

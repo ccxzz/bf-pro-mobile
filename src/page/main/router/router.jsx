@@ -7,6 +7,7 @@ import { HashRouter as Router, Route, Switch } from "react-router-dom";
 
 import FooterNav from '../components/footernav/footernav'
 import Banner from '../components/banner/banner'
+import PlayList from '../components/playlist/playlist'
 
 let store = createStore(BaseReducer);
 
@@ -29,6 +30,7 @@ class router extends React.Component {
         const IndexPage = () => (
             <div>
                 <Banner/>
+                <PlayList/>
                 <FooterNav data={{'selectMenu': 'home'}} />
             </div>
         );
