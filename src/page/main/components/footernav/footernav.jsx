@@ -1,5 +1,6 @@
 import React from 'react';
 import { TabBar, Icon } from 'antd-mobile';
+import { withRouter } from 'react-router'
 import './footernav.less';
 
 class footernav extends React.Component {
@@ -12,7 +13,9 @@ class footernav extends React.Component {
     }
 
     componentDidMount() {
-
+        this.setState({
+            selectedTab: this.props.data.selectMenu,
+        });
     }
 
     componentWillUnmount() {
@@ -21,28 +24,31 @@ class footernav extends React.Component {
 
     render() {
         const CustomIcon = ({ type, className = '', size = 'md', ...restProps }) => {
-            console.log(type)
             return  <svg className={`am-icon am-icon-${type.default.id} am-icon-${size} ${className}`}{...restProps}><use xlinkHref={'#'+type.default.id} /></svg>
         };
         return (
             <div className="footerNav">
+                <Icon/>
                 <TabBar
-                    unselectedTintColor="#949494"
-                    tintColor="#33A3F4"
-                    barTintColor="white"
+                    unselectedTintColor="#70757E"
+                    tintColor="#E7B30D"
+                    barTintColor="#1F2833"
                     hidden={this.state.hidden}
                 >
                     <TabBar.Item
                         title="首页"
                         key="home"
-                        icon={<CustomIcon type={require('./icon/aax.svg')} />}
-                        selectedIcon={<CustomIcon type={require('./icon/aax.svg')} />
-                        }
+                        icon={<CustomIcon type={require('./icon/home.svg')} />}
+                        selectedIcon={<CustomIcon type={require('./icon/homeselect.svg')} />}
                         selected={this.state.selectedTab === 'home'}
                         onPress={() => {
-                            this.setState({
-                                selectedTab: 'home',
-                            });
+                            let self = this
+                            if (self.state.selectedTab != 'home') {
+                                self.props.history.push('/')
+                                self.setState({
+                                    selectedTab: 'home',
+                                });
+                            }
                         }}
                         data-seed="home"
                     >
@@ -50,64 +56,76 @@ class footernav extends React.Component {
                     <TabBar.Item
                         title="资产"
                         key="recharge"
-                        icon={<Icon type="home"/>}
-                        selectedIcon={<Icon className="active" type="home"/>
-                        }
+                        icon={<CustomIcon type={require('./icon/dollar.svg')} />}
+                        selectedIcon={<CustomIcon type={require('./icon/dollarselect.svg')} />}
                         selected={this.state.selectedTab === 'recharge'}
                         onPress={() => {
-                            this.setState({
-                                selectedTab: 'recharge',
-                            });
+                            let self = this
+                            if (self.state.selectedTab != 'recharge') {
+                                self.props.history.push('/recharge')
+                                self.setState({
+                                    selectedTab: 'recharge',
+                                });
+                            }
                         }}
                         data-seed="recharge"
                     >
                     </TabBar.Item>
                     <TabBar.Item
                         title="账户中心"
-                        key="message"
-                        icon={<Icon type="home"/>}
-                        selectedIcon={<Icon className="active" type="home"/>
-                        }
+                        key="account"
+                        icon={<CustomIcon type={require('./icon/Account.svg')} />}
+                        selectedIcon={<CustomIcon type={require('./icon/Accountselect.svg')} />}
                         badge={2}
-                        selected={this.state.selectedTab === 'message'}
+                        selected={this.state.selectedTab === 'account'}
                         onPress={() => {
-                            this.setState({
-                                selectedTab: 'message',
-                            });
+                            let self = this
+                            if (self.state.selectedTab != 'account') {
+                                self.props.history.push('/account')
+                                self.setState({
+                                    selectedTab: 'account',
+                                });
+                            }
                         }}
-                        data-seed="message"
+                        data-seed="account"
                     >
                     </TabBar.Item>
                     <TabBar.Item
                         title="消息"
                         key="message"
-                        icon={<Icon type="home"/>}
-                        selectedIcon={<Icon className="active" type="home"/>
-                        }
+                        icon={<CustomIcon type={require('./icon/message.svg')} />}
+                        selectedIcon={<CustomIcon type={require('./icon/messageselect.svg')} />}
                         badge={2}
                         selected={this.state.selectedTab === 'message'}
                         onPress={() => {
-                            this.setState({
-                                selectedTab: 'message',
-                            });
+                            let self = this
+                            if (self.state.selectedTab != 'message') {
+                                self.props.history.push('/message')
+                                self.setState({
+                                    selectedTab: 'message',
+                                });
+                            }
                         }}
                         data-seed="message"
                     >
                     </TabBar.Item>
                     <TabBar.Item
                         title="客服"
-                        key="message"
-                        icon={<Icon type="home"/>}
-                        selectedIcon={<Icon className="active" type="home"/>
-                        }
+                        key="kefu"
+                        icon={<CustomIcon type={require('./icon/kefu.svg')} />}
+                        selectedIcon={<CustomIcon type={require('./icon/kefuselect.svg')} />}
                         badge={2}
-                        selected={this.state.selectedTab === 'message'}
+                        selected={this.state.selectedTab === 'kefu'}
                         onPress={() => {
-                            this.setState({
-                                selectedTab: 'message',
-                            });
+                            let self = this
+                            if (self.state.selectedTab != 'kefu') {
+                                self.props.history.push('/kefu')
+                                self.setState({
+                                    selectedTab: 'kefu',
+                                });
+                            }
                         }}
-                        data-seed="message"
+                        data-seed="kefu"
                     >
                     </TabBar.Item>
                 </TabBar>
@@ -116,4 +134,4 @@ class footernav extends React.Component {
     }
 }
 
-export default footernav;
+export default withRouter(footernav);
