@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, WingBlank, WhiteSpace, Icon } from 'antd-mobile';
+import { Card, WingBlank, WhiteSpace } from 'antd-mobile';
 
 class accountmsg extends React.Component {
     constructor() {

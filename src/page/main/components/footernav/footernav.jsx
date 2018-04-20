@@ -76,7 +76,6 @@ class footernav extends React.Component {
                         key="account"
                         icon={<CustomIcon type={require('./icon/Account.svg')} />}
                         selectedIcon={<CustomIcon type={require('./icon/Accountselect.svg')} />}
-                        badge={2}
                         selected={this.state.selectedTab === 'account'}
                         onPress={() => {
                             let self = this
@@ -95,7 +94,6 @@ class footernav extends React.Component {
                         key="message"
                         icon={<CustomIcon type={require('./icon/message.svg')} />}
                         selectedIcon={<CustomIcon type={require('./icon/messageselect.svg')} />}
-                        badge={2}
                         selected={this.state.selectedTab === 'message'}
                         onPress={() => {
                             let self = this
@@ -114,7 +112,6 @@ class footernav extends React.Component {
                         key="kefu"
                         icon={<CustomIcon type={require('./icon/kefu.svg')} />}
                         selectedIcon={<CustomIcon type={require('./icon/kefuselect.svg')} />}
-                        badge={2}
                         selected={this.state.selectedTab === 'kefu'}
                         onPress={() => {
                             let self = this
