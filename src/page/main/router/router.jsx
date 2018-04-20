@@ -9,6 +9,7 @@ import FooterNav from '../components/footernav/footernav'
 import Banner from '../components/banner/banner'
 import PlayList from '../components/playlist/playlist'
 import Assets from '../components/assets/assets'
+import Account from '../components/account/account'
 
 let store = createStore(BaseReducer);
 
@@ -43,6 +44,7 @@ class router extends React.Component {
         );
         const AccountPage = () => (
             <div>
+                <Account/>
                 <FooterNav data={{'selectMenu': 'account'}} />
             </div>
         );

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, WingBlank, WhiteSpace, Button } from 'antd-mobile';
+import { Card, WingBlank, WhiteSpace, Button, NavBar } from 'antd-mobile';
 import './assets.less'
 
 class assets extends React.Component {
@@ -20,6 +20,14 @@ class assets extends React.Component {
     render() {
         return (
             <div className="assets">
+                <NavBar
+                    mode="dark"
+                    // leftContent="Back"
+                    // rightContent={[
+                    //     <Icon key="0" type="search" style={{ marginRight: '16px' }} />,
+                    //     <Icon key="1" type="ellipsis" />,
+                    // ]}
+                >资产</NavBar>
                 <WingBlank size="lg">
                     <WhiteSpace size="lg" />
                     <Card>

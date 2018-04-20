@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid } from 'antd-mobile';
+import { Grid, WingBlank, WhiteSpace } from 'antd-mobile';
 
 const data = Array.from(new Array(9)).map((_val, i) => ({
     icon: 'https://gw.alipayobjects.com/zos/rmsportal/nywPmnTAvTmLusPxHPSu.png',
@@ -24,7 +24,10 @@ class playlistgrid extends React.Component {
     render() {
         return (
             <div className="playlistgrid">
-                <Grid data={data} columnNum={3} />
+                <WingBlank size="lg">
+                    <Grid data={data} columnNum={3} />
+                    <WhiteSpace size="lg" />
+                </WingBlank>
             </div>
         );
     }
