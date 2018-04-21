@@ -10,6 +10,9 @@ import Banner from '../components/banner/banner'
 import PlayList from '../components/playlist/playlist'
 import Assets from '../components/assets/assets'
 import Account from '../components/account/account'
+import Exception from '../components/exception/exception'
+import Message from '../components/message/message'
+import MessageContent from '../components/messagecontent/messagecontent'
 
 let store = createStore(BaseReducer);
 
@@ -50,12 +53,25 @@ class router extends React.Component {
         );
         const MessagePage = () => (
             <div>
+                <Message/>
+                <FooterNav data={{'selectMenu': 'message'}} />
+            </div>
+        );
+        const MessageContentPage = () => (
+            <div>
+                <MessageContent/>
                 <FooterNav data={{'selectMenu': 'message'}} />
             </div>
         );
         const KefuPage = () => (
             <div>
                 <FooterNav data={{'selectMenu': 'kefu'}} />
+            </div>
+        );
+        const ExceptionPage = () => (
+            <div>
+                <Exception />
+                <FooterNav data={{'selectMenu': 'home'}} />
             </div>
         );
         return (
@@ -68,6 +84,9 @@ class router extends React.Component {
                             <Route path="/account" component={AccountPage}/>
                             <Route path="/message" component={MessagePage}/>
                             <Route path="/kefu" component={KefuPage}/>
+                            <Route path="/message" component={MessagePage}/>
+                            <Route path="/messagecontent/:id" component={MessageContentPage}/>
+                            <Route component={ExceptionPage}/>
                         </Switch>
                     </div>
                 </Router>
