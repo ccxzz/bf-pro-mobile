@@ -8,10 +8,13 @@
     left: 0;
     z-index: 999;
   }
+  .am-card-header {
+    padding: 0 15px;
+  }
   .coinImg {
-    position: absolute;
-    right: 10px;
-    top: 10px;
+    //position: absolute;
+    //right: 10px;
+    //top: 10px;
   }
   .strongName {
     font-size: 19px;
@@ -57,5 +60,11 @@
   }
   .am-card:not(.am-card-full)::before {
     border: none!important;
+  }
+  .am-card:not(.am-card-full)::before {
+    content: none!important;
+  }
+  .am-card-body::before{
+    content: none!important;
   }
 }
