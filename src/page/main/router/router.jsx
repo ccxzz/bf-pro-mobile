@@ -21,7 +21,7 @@ class router extends React.Component {
     constructor() {
         super();
         this.state = {
-            isLogin: false
+            isLogin: true
         };
     }
 

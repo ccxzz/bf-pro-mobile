@@ -1,5 +1,23 @@
 .login {
   padding-top: 45px;
+  .am-list-body {
+    background: none;
+  }
+  .am-list-item {
+    background: none;
+    border: 1px solid #c3c3c3;
+  }
+  .am-list-item .am-input-clear {
+    background-color: #f0b90b;
+    color: #fff;
+  }
+  .am-list-item .am-input-control input{
+    color: #fff;
+    caret-color:#f0b90b;
+  }
+  .am-list-item.am-input-item {
+    margin: 5px 0;
+  }
   .am-navbar {
     background-color: #1f2833;
     position: fixed;
@@ -7,5 +25,19 @@
     top: 0;
     left: 0;
     z-index: 999;
+  }
+  .am-list-line::after,
+  .am-list-body::after,
+  .am-list-body::before {
+    content: none!important;
+  }
+  .am-button {
+    border-radius: 0;
+    background: none;
+    color: #f0b90b;
+    border: 2px solid #f0b90b!important;
+  }
+  .am-button::before {
+    content: none!important;
   }
 }
