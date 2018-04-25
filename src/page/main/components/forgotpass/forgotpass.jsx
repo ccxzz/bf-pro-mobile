@@ -108,7 +108,7 @@ class forgotpass extends React.Component {
                         已有账号? <Link className="txt-orange" to="/login">登录</Link>
                     </p>
                     <p className="tet-center">
-                        还没有账号? <Link className="txt-orange" to="/">注册</Link>
+                        还没有账号? <Link className="txt-orange" to="/register">注册</Link>
                     </p>
                 </WingBlank>
             </div>

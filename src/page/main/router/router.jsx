@@ -15,6 +15,7 @@ import Message from '../components/message/message'
 import MessageContent from '../components/messagecontent/messagecontent'
 import Login from '../components/login/login'
 import ForgotPass from '../components/forgotpass/forgotpass'
+import Register from '../components/register/register'
 
 let store = createStore(BaseReducer);
 
@@ -91,6 +92,11 @@ class router extends React.Component {
                 <ForgotPass />
             </div>
         );
+        const RegisterPage = () => (
+            <div>
+                <Register />
+            </div>
+        );
 
         return (
             <Provider store={store}>
@@ -108,6 +114,7 @@ class router extends React.Component {
                                     <Route path="/messagecontent/:id" component={MessageContentPage}/>
                                     <Route path="/login" component={LoginPage}/>
                                     <Route path="/forgotpass" component={ForgotPassPage}/>
+                                    <Route path="/register" component={RegisterPage}/>
                                     <Route component={ExceptionPage}/>
                                 </Switch>
                             ) : (
@@ -115,6 +122,7 @@ class router extends React.Component {
                                     <Route path="/" exact component={LoginPage}/>
                                     <Route path="/login" component={LoginPage}/>
                                     <Route path="/forgotpass" component={ForgotPassPage}/>
+                                    <Route path="/register" component={RegisterPage}/>
                                     <Route component={LoginPage}/>
                                 </Switch>
                             )

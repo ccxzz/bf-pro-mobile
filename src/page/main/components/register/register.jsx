@@ -1,24 +1,13 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import {bindActionCreators} from 'redux';
 import { withRouter, Link } from "react-router-dom";
-import LoginAction from  '../../store/action/loginaction';
 import { List, InputItem, WingBlank, WhiteSpace, Button, NavBar, Modal } from 'antd-mobile';
 import { createForm } from 'rc-form';
-import './login.less'
+import './register.less'
 
 const alert = Modal.alert;
 
-const mapStateToProps = (state) => {
-    return ({
-        isLogin: state.loginreducer.isLogin
-    })
-};
-const mapDispatchToProps = (dispatch) => {
-    return { localLoginActions: bindActionCreators(LoginAction, dispatch) }
-};
 
-class login extends React.Component {
+class register extends React.Component {
     constructor() {
         super();
         this.state = {
@@ -51,18 +40,12 @@ class login extends React.Component {
     }
 
     submit = () => {
-        const { localLoginActions } = this.props;
         let self = this;
         this.props.form.validateFields((error, value) => {
             if (!error) {
-                if (value.account === 'admin' && value.password === '123456') {
-                    localLoginActions.loginStateChange(true);
-                    self.props.history.push('/')
-                } else {
-                    alert('提示', '账号或密码错误', [
-                        { text: '关闭' },
-                    ])
-                }
+                alert('提示', '注册成功', [
+                    { text: '确定', onPress: () => self.props.history.push('/login') },
+                ])
             }
         });
     }
@@ -70,18 +53,17 @@ class login extends React.Component {
         // const { getFieldProps } = this.props.form;
         const { getFieldError } = this.props.form;
         return (
-            <div className="login">
+            <div className="register">
                 <NavBar
                     mode="dark"
-                >登录</NavBar>
+                >注册</NavBar>
                 <WingBlank size="lg">
                     <WhiteSpace size="lg" />
                     <List>
                         {this.nameDecorator(
                             <InputItem
                                 clear
-                                placeholder="输入账号/admin"
-                                ref={el => this.autoFocusInst = el}
+                                placeholder="请输入账号"
                             ></InputItem>
                         )}
                         <div style={{ color: 'red', height: '20px' }}>
@@ -90,8 +72,7 @@ class login extends React.Component {
                         {this.passDecorator(
                             <InputItem
                                 clear
-                                placeholder="输入密码/123456"
-                                ref={el => this.customFocusInst = el}
+                                placeholder="输入密码"
                             ></InputItem>
                         )}
                         <div style={{ color: 'red', height: '20px' }}>
@@ -99,13 +80,13 @@ class login extends React.Component {
                         </div>
                     </List>
                     <WhiteSpace size="lg" />
-                    <Button onClick={this.submit}>登录</Button>
+                    <Button onClick={this.submit}>注册</Button>
                     <WhiteSpace size="lg" />
                     <p className="tet-center">
-                        <Link className="txt-orange" to="/forgotpass">忘记密码?</Link>
+                        <Link className="txt-orange" to="/forgotpass">修改密码</Link>
                     </p>
                     <p className="tet-center">
-                        还没有账号? <Link className="txt-orange" to="/register">注册</Link>
+                        已有账号? <Link className="txt-orange" to="/login">登录</Link>
                     </p>
                 </WingBlank>
             </div>
@@ -113,4 +94,4 @@ class login extends React.Component {
     }
 }
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(createForm()(login)));
+export default withRouter(createForm()(register));
