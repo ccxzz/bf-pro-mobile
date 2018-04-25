@@ -50,7 +50,7 @@ class accountmsg extends React.Component {
                                 </Flex>
                             </div>
                         </Card.Body>
-                        <Card.Footer content="" extra={<div>
+                        <Card.Footer content="" extra={<div style={{ display: 'flex',justifyContent: 'space-around' }}>
                             <Button className="assetsBtn">充值</Button>
                             <Button className="assetsBtn">提现</Button>
                             <Button className="assetsBtn">交易</Button>
