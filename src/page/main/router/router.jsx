@@ -14,6 +14,7 @@ import Exception from '../components/exception/exception'
 import Message from '../components/message/message'
 import MessageContent from '../components/messagecontent/messagecontent'
 import Login from '../components/login/login'
+import ForgotPass from '../components/forgotpass/forgotpass'
 
 let store = createStore(BaseReducer);
 
@@ -21,12 +22,16 @@ class router extends React.Component {
     constructor() {
         super();
         this.state = {
-            isLogin: true
+            isLogin: false
         };
     }
 
     componentDidMount() {
-
+        let self = this;
+        store.subscribe(function () {
+            let stateArr = store.getState();
+            self.state.isLogin = stateArr.loginreducer.isLogin;
+        });
     }
 
     componentWillUnmount() {
@@ -81,6 +86,11 @@ class router extends React.Component {
                 <Login />
             </div>
         );
+        const ForgotPassPage = () => (
+            <div>
+                <ForgotPass />
+            </div>
+        );
 
         return (
             <Provider store={store}>
@@ -97,10 +107,14 @@ class router extends React.Component {
                                     <Route path="/message" component={MessagePage}/>
                                     <Route path="/messagecontent/:id" component={MessageContentPage}/>
                                     <Route path="/login" component={LoginPage}/>
+                                    <Route path="/forgotpass" component={ForgotPassPage}/>
                                     <Route component={ExceptionPage}/>
                                 </Switch>
                             ) : (
-                                <LoginPage />
+                                <Switch>
+                                    <Route path="/login" component={LoginPage}/>
+                                    <Route path="/forgotpass" component={ForgotPassPage}/>
+                                </Switch>
                             )
                         )}/>
                     </div>
