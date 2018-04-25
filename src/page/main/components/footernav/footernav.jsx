@@ -1,6 +1,6 @@
 import React from 'react';
 import { TabBar, Icon } from 'antd-mobile';
-import { withRouter } from 'react-router'
+import { withRouter } from 'react-router-dom'
 import './footernav.less';
 
 class footernav extends React.Component {
