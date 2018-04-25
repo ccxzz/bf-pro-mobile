@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, WingBlank, WhiteSpace } from 'antd-mobile';
+import { Card, WingBlank, WhiteSpace, Flex, Button } from 'antd-mobile';
 
 class accountmsg extends React.Component {
     constructor() {
@@ -31,9 +31,31 @@ class accountmsg extends React.Component {
                             extra={<span></span>}
                         />
                         <Card.Body>
-                            <div>账户信息.......</div>
+                            <div>
+                                <Flex>
+                                    <Flex.Item>
+                                        链家总币量：1000
+                                    </Flex.Item>
+                                    <Flex.Item>
+                                        可用： 998
+                                    </Flex.Item>
+                                </Flex>
+                                <Flex>
+                                    <Flex.Item>
+                                        冻结：1000
+                                    </Flex.Item>
+                                    <Flex.Item>
+                                        分红冻结： 998
+                                    </Flex.Item>
+                                </Flex>
+                            </div>
                         </Card.Body>
-                        <Card.Footer content="footer content" extra={<div>extra footer content</div>} />
+                        <Card.Footer content="" extra={<div>
+                            <Button className="assetsBtn">充值</Button>
+                            <Button className="assetsBtn">提现</Button>
+                            <Button className="assetsBtn">交易</Button>
+                            <Button className="assetsBtn">兑换</Button>
+                        </div>} />
                     </Card>
                     <WhiteSpace size="lg" />
                 </WingBlank>

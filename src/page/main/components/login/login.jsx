@@ -56,7 +56,10 @@ class login extends React.Component {
         this.props.form.validateFields((error, value) => {
             if (!error) {
                 if (value.account === 'admin' && value.password === '123456') {
-                    localLoginActions.loginStateChange(true);
+
+                    sessionStorage.setItem("session", value.account)
+
+                    localLoginActions.loginStateChange(value.account);
                     self.props.history.push('/')
                 } else {
                     alert('提示', '账号或密码错误', [

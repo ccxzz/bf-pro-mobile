@@ -1,5 +1,5 @@
 const LoginDataObj = {
-    isLogin: false
+    isLogin: sessionStorage.getItem("session")
 };
 const LoginReducer = (state = LoginDataObj, action) => {
     switch (action.type) {

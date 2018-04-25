@@ -1,5 +1,5 @@
 import React from 'react';
-import { List, NavBar, WhiteSpace, Icon } from 'antd-mobile';
+import { List, NavBar, WingBlank, WhiteSpace, Icon, Button } from 'antd-mobile';
 import './account.less'
 
 
@@ -21,6 +21,10 @@ class account extends React.Component {
 
     }
 
+    toLogOut = () => {
+        sessionStorage.setItem("session", "");
+        window.location.reload()
+    }
     render() {
         const CustomIcon = ({ type, className = '', size = 'md', ...restProps }) => {
             return  <svg className={`am-icon am-icon-${type.default.id} am-icon-${size} ${className}`}{...restProps}><use xlinkHref={'#'+type.default.id} /></svg>
@@ -50,17 +54,36 @@ class account extends React.Component {
                     </Item>
                     <Item
                         arrow="horizontal"
-                        thumb={<CustomIcon type={require('./icon/locks.svg')} />}
+                        thumb={<CustomIcon type={require('./icon/wallet.svg')} />}
                         extra={'extra content'}>
                         钱包管理
                     </Item>
                     <Item
                         arrow="horizontal"
-                        thumb={<CustomIcon type={require('./icon/locks.svg')} />}
+                        thumb={<CustomIcon type={require('./icon/Google.svg')} />}
                         extra={'extra content'}>
                         谷歌认证
                     </Item>
                 </List>
+                <WhiteSpace size="lg" />
+                <List className="my-list">
+                    <Item
+                        arrow="horizontal"
+                        thumb={<CustomIcon type={require('./icon/share.svg')} />}
+                        extra={'extra content'}>
+                        邀请好友
+                    </Item>
+                    <Item
+                        arrow="horizontal"
+                        thumb={<CustomIcon type={require('./icon/guanli.svg')} />}
+                        extra={'extra content'}>
+                        厅主管理
+                    </Item>
+                </List>
+                <WhiteSpace size="lg" />
+                <WingBlank>
+                    <Button onClick={this.toLogOut} type="primary">退出登录</Button>
+                </WingBlank>
             </div>
         );
     }
