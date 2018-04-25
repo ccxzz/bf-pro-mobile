@@ -112,8 +112,10 @@ class router extends React.Component {
                                 </Switch>
                             ) : (
                                 <Switch>
+                                    <Route path="/" exact component={LoginPage}/>
                                     <Route path="/login" component={LoginPage}/>
                                     <Route path="/forgotpass" component={ForgotPassPage}/>
+                                    <Route component={LoginPage}/>
                                 </Switch>
                             )
                         )}/>

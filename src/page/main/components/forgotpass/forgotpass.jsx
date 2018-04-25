@@ -105,7 +105,7 @@ class forgotpass extends React.Component {
                     <Button onClick={this.submit}>确定</Button>
                     <WhiteSpace size="lg" />
                     <p className="tet-center">
-                        <Link className="txt-orange" to="/login">登录</Link>
+                        已有账号? <Link className="txt-orange" to="/login">登录</Link>
                     </p>
                     <p className="tet-center">
                         还没有账号? <Link className="txt-orange" to="/">注册</Link>
