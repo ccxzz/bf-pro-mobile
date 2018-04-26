@@ -41,11 +41,10 @@
     height: 30px;
     line-height: 30px;
     border-radius: 0;
-    padding: 0 20px;
-    margin: 0 5px;
+    padding: 0 15px;
   }
-  .am-card-footer-extra {
-    flex: 9;
+  .am-card-footer-content {
+    flex: 0;
   }
   .assetsBtn.am-button {
     border: 1px solid #ddd;
@@ -69,5 +68,19 @@
   }
   .am-card-body::before{
     content: none!important;
+  }
+}
+.exchangeModal {
+  .am-list-line,
+  .am-list-body {
+    border: none;
+  }
+  .am-list-line::after,
+  .am-list-body::after,
+  .am-list-body::before {
+    content: none!important;
+  }
+  .am-list-item {
+    border: 1px solid #ececec;
   }
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, WingBlank, WhiteSpace, Flex, Button } from 'antd-mobile';
+import { Link } from "react-router-dom";
 
 class accountmsg extends React.Component {
     constructor() {
@@ -54,7 +55,7 @@ class accountmsg extends React.Component {
                             <Button className="assetsBtn">充值</Button>
                             <Button className="assetsBtn">提现</Button>
                             <Button className="assetsBtn">交易</Button>
-                            <Button className="assetsBtn">兑换</Button>
+                            <Link to="/recharge" className="assetsBtn">兑换</Link>
                         </div>} />
                     </Card>
                     <WhiteSpace size="lg" />

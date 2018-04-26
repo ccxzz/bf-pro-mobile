@@ -19,11 +19,20 @@
     }
     .assetsBtn {
       display: inline-block;
+      outline: 0 none;
+      -webkit-appearance: none;
+      box-sizing: content-box;
       font-size: 14px;
-      height: 30px;
-      line-height: 30px;
+      height: 25px;
+      line-height: 25px;
       border-radius: 0;
       padding: 0 20px;
+      border-radius: 0;
+      border: 1px solid #d0d0d0;
+      color: #000;
+    }
+    .am-button::before {
+      content: none!important;
     }
     .am-card-footer-content{
       flex: 0;
@@ -36,6 +45,11 @@
     }
     .am-card-body {
       border: none;
+      padding: 15px;
+    }
+    .am-card-body::before,
+    .am-card:not(.am-card-full)::before {
+      content: none!important;
     }
     .am-card-header-content {
       color: #f0b90b;
