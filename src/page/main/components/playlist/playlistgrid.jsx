@@ -50,7 +50,9 @@ class playlistgrid extends React.Component {
             <div className="playlistgrid">
                 <WingBlank size="lg">
                     <Grid data={data} onClick={data => {
-                        this.props.history.push('/coinroom/' + data.type)
+                        if (data.type) {
+                            this.props.history.push('/coinroom/' + data.type)
+                        }
                     }} columnNum={3} />
                     <WhiteSpace size="lg" />
                 </WingBlank>
