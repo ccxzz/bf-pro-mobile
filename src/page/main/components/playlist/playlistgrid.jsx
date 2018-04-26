@@ -52,6 +52,8 @@ class playlistgrid extends React.Component {
                     <Grid data={data} onClick={data => {
                         if (data.type) {
                             this.props.history.push('/coinroom/' + data.type)
+                        } else {
+                            this.props.history.push('/addhall')
                         }
                     }} columnNum={3} />
                     <WhiteSpace size="lg" />
