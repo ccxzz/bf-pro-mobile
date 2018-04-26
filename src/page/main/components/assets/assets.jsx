@@ -161,7 +161,7 @@ class assets extends React.Component {
                                 <InputItem
                                     clear
                                     type="number"
-                                    placeholder="输入购买数量"
+                                    placeholder="输入兑换数量"
                                 ></InputItem>
                             )}
                             <div style={{ color: 'red', textAlign: 'left' }}>

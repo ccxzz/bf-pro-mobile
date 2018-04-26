@@ -118,7 +118,6 @@ class router extends React.Component {
                                     <Route path="/message" component={MessagePage}/>
                                     <Route path="/kefu" component={KefuPage}/>
                                     <Route path="/message" component={MessagePage}/>
-                                    <Route path="/coinexchange" component={CoinExchangePage}/>
                                     <Route path="/messagecontent/:id" component={MessageContentPage}/>
                                     <Route path="/login" component={LoginPage}/>
                                     <Route path="/forgotpass" component={ForgotPassPage}/>
