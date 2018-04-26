@@ -1,22 +1,27 @@
 import React from 'react';
 import { Grid, WingBlank, WhiteSpace } from 'antd-mobile';
+import { withRouter } from "react-router-dom";
 import addCoin from './icon/add.png';
 
 const data = [
     {
         icon: 'http://xinbfzx.oss-ap-southeast-1.aliyuncs.com/upload/pic/cpc.png',
+        type: 'CPC',
         text: `CPC大厅`,
     },
     {
         icon: 'http://xinbfzx.oss-ap-southeast-1.aliyuncs.com/upload/pic/btc.png',
+        type: 'BTC',
         text: `BTC大厅`,
     },
     {
         icon: 'http://xinbfzx.oss-ap-southeast-1.aliyuncs.com/upload/pic/dash.png',
+        type: 'DASH',
         text: `DASH大厅`,
     },
     {
         icon: ' http://xinbfzx.oss-ap-southeast-1.aliyuncs.com/upload/pic/hsr.png',
+        type: 'HSR',
         text: `HSR大厅`,
     },
     {
@@ -44,7 +49,9 @@ class playlistgrid extends React.Component {
         return (
             <div className="playlistgrid">
                 <WingBlank size="lg">
-                    <Grid data={data} columnNum={3} />
+                    <Grid data={data} onClick={data => {
+                        this.props.history.push('/coinroom/' + data.type)
+                    }} columnNum={3} />
                     <WhiteSpace size="lg" />
                 </WingBlank>
             </div>
@@ -52,4 +59,4 @@ class playlistgrid extends React.Component {
     }
 }
 
-export default playlistgrid;
+export default withRouter(playlistgrid);
