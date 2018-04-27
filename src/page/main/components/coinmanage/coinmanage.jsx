@@ -36,7 +36,7 @@ class coinmanage extends React.Component {
             <div className="coinmanage">
                 <NavBar
                     mode="dark"
-                    leftContent={<Link className="nacBarLink" to="/recharge">返回</Link>}
+                    leftContent={<Link className="nacBarLink" to="/account">返回</Link>}
                 >钱包管理</NavBar>
                 <WhiteSpace size="lg" />
                 <List className="my-list pd-5">

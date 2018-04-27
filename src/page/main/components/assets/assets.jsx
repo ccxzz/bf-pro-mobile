@@ -73,7 +73,7 @@ class assets extends React.Component {
             <div className="assets">
                 <NavBar
                     mode="dark"
-                    rightContent={<Link className="nacBarLink" to="/coinmanage">管理</Link>}
+                    // rightContent={<Link className="nacBarLink" to="/coinmanage">管理</Link>}
                     // leftContent="Back"
                     // rightContent={[
                     //     <Icon key="0" type="search" style={{ marginRight: '16px' }} />,

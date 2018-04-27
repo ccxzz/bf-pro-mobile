@@ -45,12 +45,22 @@ class account extends React.Component {
                 <WhiteSpace size="lg" />
                 <List className="my-list">
                     <Item
+                        onClick = {
+                            () => {
+                                this.props.history.push('/forgotpass')
+                            }
+                        }
                         arrow="horizontal"
                         thumb={<CustomIcon type={require('./icon/locks.svg')} />}
                         extra={''}>
                         修改密码
                     </Item>
                     <Item
+                        onClick = {
+                            () => {
+                                this.props.history.push('/coinmanage')
+                            }
+                        }
                         arrow="horizontal"
                         thumb={<CustomIcon type={require('./icon/wallet.svg')} />}
                         extra={''}>
