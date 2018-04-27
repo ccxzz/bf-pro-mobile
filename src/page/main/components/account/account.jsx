@@ -77,6 +77,11 @@ class account extends React.Component {
                         邀请好友
                     </Item>
                     <Item
+                        onClick = {
+                            () => {
+                                this.props.history.push('/hallmanage')
+                            }
+                        }
                         arrow="horizontal"
                         thumb={<CustomIcon type={require('./icon/guanli.svg')} />}
                         extra={''}>

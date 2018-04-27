@@ -40,7 +40,7 @@ class invitation extends React.Component {
                             <span> &nbsp;&nbsp;成功邀请（人）</span>
                         </Flex>
                         <p>11</p>
-                        <p><Link className="link-sty" to="/account">查看详情</Link></p>
+                        <p><Link className="link-sty" to="/hallmanage">查看详情</Link></p>
                     </Flex.Item>
                     <Flex.Item>
                         <Flex>
@@ -48,7 +48,7 @@ class invitation extends React.Component {
                             <span> &nbsp;&nbsp;提成收益</span>
                         </Flex>
                         <p> </p>
-                        <p><Link className="link-sty" to="/account">查看详情</Link></p>
+                        <p><Link className="link-sty" to="/hallmanage">查看详情</Link></p>
                     </Flex.Item>
                 </Flex>
                 <WhiteSpace size="lg" />
