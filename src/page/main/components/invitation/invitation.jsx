@@ -66,9 +66,9 @@ class invitation extends React.Component {
                         推荐链接
                     </Item>
                     <Item className="list-item-content" extra={''}>
-                        <a href="javascript:void(0);">
+                        <div className="link-yq">
                             https://wewillberich.coinpayline.com/Login/register.html?invit=ZBVHCXQKL
-                        </a>
+                        </div>
                         <div className="erweima">
                             <img src={erweima}/>
                         </div>
