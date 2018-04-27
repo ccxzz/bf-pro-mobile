@@ -19,6 +19,7 @@ import Register from '../components/register/register'
 import CoinExchange from '../components/coinexchange/coinexchange'
 import CoinRoom from '../components/coinroom/coinroom'
 import AddHall from '../components/addhall/addhall'
+import CoinManage from '../components/coinmanage/coinmanage'
 
 let store = createStore(BaseReducer);
 
@@ -98,6 +99,12 @@ class router extends React.Component {
                 <FooterNav data={{'selectMenu': 'home'}} />
             </div>
         );
+        const CoinManagePage = () => (
+            <div>
+                <CoinManage />
+                <FooterNav data={{'selectMenu': ''}} />
+            </div>
+        );
         const CoinRoomPage = () => (
             <div>
                 <Banner/>
@@ -136,6 +143,7 @@ class router extends React.Component {
                                     <Route path="/message" component={MessagePage}/>
                                     <Route path="/coinroom/:id" component={CoinRoomPage}/>
                                     <Route path="/addhall" component={AddHallPage}/>
+                                    <Route path="/coinmanage" component={CoinManagePage}/>
                                     <Route path="/messagecontent/:id" component={MessageContentPage}/>
                                     <Route path="/login" component={LoginPage}/>
                                     <Route path="/forgotpass" component={ForgotPassPage}/>

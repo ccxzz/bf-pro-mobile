@@ -221,8 +221,6 @@ class addhall extends React.Component {
                                 <span>{i.name}</span>(<span>{i.type}</span>)
                             </List.Item>
                         ))}
-                        <List.Item>
-                        </List.Item>
                     </List>
                 </Modal>
             </div>

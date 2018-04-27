@@ -34,11 +34,7 @@ class account extends React.Component {
                 <NavBar
                     mode="dark"
                     // leftContent="Back"
-                    // rightContent={[
-                    //     <Icon key="0" type="search" style={{ marginRight: '16px' }} />,
-                    //     <Icon key="1" type="ellipsis" />,
-                    // ]}
-                >资产</NavBar>
+                >账户中心</NavBar>
                 <List className="my-list pd-5">
                     <Item thumb={<CustomIcon type={require('./icon/account-circle.svg')} />} extra={''}>
                         <span className="useraccount">123132131@qq.com</span>

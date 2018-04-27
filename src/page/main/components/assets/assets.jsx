@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, WingBlank, WhiteSpace, Button, NavBar, Modal, List, InputItem } from 'antd-mobile';
+import { Link } from "react-router-dom";
 import { createForm } from 'rc-form';
 import './assets.less'
 
@@ -72,6 +73,7 @@ class assets extends React.Component {
             <div className="assets">
                 <NavBar
                     mode="dark"
+                    rightContent={<Link className="nacBarLink" to="/coinmanage">管理</Link>}
                     // leftContent="Back"
                     // rightContent={[
                     //     <Icon key="0" type="search" style={{ marginRight: '16px' }} />,
