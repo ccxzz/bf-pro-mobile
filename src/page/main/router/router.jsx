@@ -23,6 +23,7 @@ import AddHall from '../components/addhall/addhall'
 import CoinManage from '../components/coinmanage/coinmanage'
 import Invitation from '../components/invitation/invitation'
 import HallManage from '../components/hallmanage/hallmanage'
+import GuessingPage from '../components/guessingpage/guessingpage'
 
 let store = createStore(BaseReducer);
 
@@ -145,6 +146,7 @@ class router extends React.Component {
 
         const guessingcompetitionPage = () => (
             <div>
+                <GuessingPage />
                 <FooterGuess  data={{'selectMenu': ''}}/>
             </div>
         )
