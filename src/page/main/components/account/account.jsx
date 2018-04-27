@@ -1,6 +1,8 @@
 import React from 'react';
 import { List, NavBar, WingBlank, WhiteSpace, Icon, Button } from 'antd-mobile';
+import { withRouter } from 'react-router-dom'
 import './account.less'
+import invitation from "../invitation/invitation";
 
 
 const Item = List.Item;
@@ -45,34 +47,39 @@ class account extends React.Component {
                     <Item
                         arrow="horizontal"
                         thumb={<CustomIcon type={require('./icon/locks.svg')} />}
-                        extra={'extra content'}>
+                        extra={''}>
                         修改密码
                     </Item>
                     <Item
                         arrow="horizontal"
                         thumb={<CustomIcon type={require('./icon/wallet.svg')} />}
-                        extra={'extra content'}>
+                        extra={''}>
                         钱包管理
                     </Item>
                     <Item
                         arrow="horizontal"
                         thumb={<CustomIcon type={require('./icon/Google.svg')} />}
-                        extra={'extra content'}>
+                        extra={''}>
                         谷歌认证
                     </Item>
                 </List>
                 <WhiteSpace size="lg" />
                 <List className="my-list">
                     <Item
+                        onClick = {
+                            () => {
+                                this.props.history.push('/invitation')
+                            }
+                        }
                         arrow="horizontal"
                         thumb={<CustomIcon type={require('./icon/share.svg')} />}
-                        extra={'extra content'}>
+                        extra={''}>
                         邀请好友
                     </Item>
                     <Item
                         arrow="horizontal"
                         thumb={<CustomIcon type={require('./icon/guanli.svg')} />}
-                        extra={'extra content'}>
+                        extra={''}>
                         厅主管理
                     </Item>
                 </List>
@@ -85,4 +92,4 @@ class account extends React.Component {
     }
 }
 
-export default account;
+export default withRouter(account);
