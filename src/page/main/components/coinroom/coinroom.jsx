@@ -1,18 +1,28 @@
 import React from 'react';
 import { Card, Grid, WingBlank, WhiteSpace,  Flex, Button } from 'antd-mobile';
+import { withRouter } from "react-router-dom";
 import { Link } from "react-router-dom";
 import  './coinroom.less';
 
 const data = [
     {
+        roomType:'jc',
+        type: 'CPC',
+        icon: 'https://gw.alipayobjects.com/zos/rmsportal/nywPmnTAvTmLusPxHPSu.png',
+        text: `赛事竞猜`,
+    },
+    {
+        type: 'CPC',
         icon: 'https://gw.alipayobjects.com/zos/rmsportal/nywPmnTAvTmLusPxHPSu.png',
         text: `房间1`,
     },
     {
+        type: 'CPC',
         icon: 'https://gw.alipayobjects.com/zos/rmsportal/nywPmnTAvTmLusPxHPSu.png',
         text: `房间2`,
     },
     {
+        type: 'CPC',
         icon: 'https://gw.alipayobjects.com/zos/rmsportal/nywPmnTAvTmLusPxHPSu.png',
         text: `房间3`,
     },
@@ -70,7 +80,11 @@ class coinroom extends React.Component {
                         </Card>
                     </div>
                     <WhiteSpace size="lg" />
-                    <Grid data={data}  columnNum={3} />
+                    <Grid data={data} onClick={data => {
+                        if (data.roomType === 'jc') {
+                            this.props.history.push('/guessingcompetition/' + data.type)
+                        }
+                    }}  columnNum={3} />
                     <WhiteSpace size="lg" />
                 </WingBlank>
             </div>
@@ -78,4 +92,4 @@ class coinroom extends React.Component {
     }
 }
 
-export default coinroom;
+export default withRouter(coinroom);

@@ -3,9 +3,10 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import BaseReducer from '../store/reducer/basereducer'
 
-import { HashRouter as Router, Route, Switch, Redirect } from "react-router-dom";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
 
 import FooterNav from '../components/footernav/footernav'
+import FooterGuess from '../components/footerguess/footerguess'
 import Banner from '../components/banner/banner'
 import PlayList from '../components/playlist/playlist'
 import Assets from '../components/assets/assets'
@@ -142,6 +143,13 @@ class router extends React.Component {
             </div>
         );
 
+        const guessingcompetitionPage = () => (
+            <div>
+                <FooterGuess  data={{'selectMenu': ''}}/>
+            </div>
+        )
+
+
         return (
             <Provider store={store}>
                 <Router>
@@ -164,6 +172,7 @@ class router extends React.Component {
                                     <Route path="/login" component={LoginPage}/>
                                     <Route path="/forgotpass" component={ForgotPassPage}/>
                                     <Route path="/register" component={RegisterPage}/>
+                                    <Route path="/guessingcompetition/:id" component={guessingcompetitionPage}/>
                                     <Route component={ExceptionPage}/>
                                 </Switch>
                             ) : (
