@@ -91,20 +91,21 @@ class footerguess extends React.Component {
                     </TabBar.Item>
                     <TabBar.Item
                         title="交易状况"
-                        key="jystatus"
+                        key="tradedetail"
+                        badge={2}
                         icon={<CustomIcon type={require('./icon/jystatus.svg')} />}
                         selectedIcon={<CustomIcon type={require('./icon/jystatusselect.svg')} />}
-                        selected={this.state.selectedTab === 'jystatus'}
+                        selected={this.state.selectedTab === 'tradedetail'}
                         onPress={() => {
                             let self = this
-                            if (self.state.selectedTab != 'jystatus') {
-                                self.props.history.push('/jystatus')
+                            if (self.state.selectedTab != 'tradedetail') {
+                                self.props.history.push('/tradedetail')
                                 self.setState({
-                                    selectedTab: 'jystatus',
+                                    selectedTab: 'tradedetail',
                                 });
                             }
                         }}
-                        data-seed="jystatus"
+                        data-seed="tradedetail"
                     >
                     </TabBar.Item>
                 </TabBar>

@@ -25,6 +25,7 @@ import Invitation from '../components/invitation/invitation'
 import HallManage from '../components/hallmanage/hallmanage'
 import GuessingPage from '../components/guessingpage/guessingpage'
 import AccountHistory from '../components/accounthistory/accounthistory'
+import TradeDetail from '../components/tradedetail/tradedetail'
 
 let store = createStore(BaseReducer);
 
@@ -157,6 +158,12 @@ class router extends React.Component {
                 <FooterGuess  data={{'selectMenu': 'accounthistory'}}/>
             </div>
         );
+        const TradeDetailPage = () => (
+            <div>
+                <TradeDetail />
+                <FooterGuess  data={{'selectMenu': 'tradedetail'}}/>
+            </div>
+        );
 
 
         return (
@@ -178,6 +185,7 @@ class router extends React.Component {
                                     <Route path="/invitation" component={InvitationPage}/>
                                     <Route path="/hallmanage" component={HallManagePage}/>
                                     <Route path="/accounthistory" component={AccountHistoryPage}/>
+                                    <Route path="/tradedetail" component={TradeDetailPage}/>
                                     <Route path="/messagecontent/:id" component={MessageContentPage}/>
                                     <Route path="/login" component={LoginPage}/>
                                     <Route path="/forgotpass" component={ForgotPassPage}/>

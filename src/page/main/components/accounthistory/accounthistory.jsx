@@ -1,9 +1,6 @@
 import React from 'react';
-import { List, NavBar, WingBlank, WhiteSpace, Flex } from 'antd-mobile';
-import { withRouter } from 'react-router-dom'
+import { NavBar, Flex } from 'antd-mobile';
 import './accounthistory.less'
-
-const Item = List.Item;
 
 class accounthistory extends React.Component {
     constructor() {
@@ -153,4 +150,4 @@ class accounthistory extends React.Component {
     }
 }
 
-export default withRouter(accounthistory);
+export default accounthistory;
