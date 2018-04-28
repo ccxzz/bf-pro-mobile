@@ -53,7 +53,9 @@ class guessingpage extends React.Component {
                     </Flex>
                     <WingBlank size="lg">
                         <WhiteSpace size="lg" />
-                        <Flex className="guessList">
+                        <Flex className="guessList" onClick={() => {
+                            this.props.history.push("/matchlist/football-CPC")
+                        }}>
                             <Flex.Item>
                                 <CustomIcon type={require('./icon/football.svg')} />
                             </Flex.Item>
@@ -62,7 +64,9 @@ class guessingpage extends React.Component {
                             </Flex.Item>
                         </Flex>
                         <WhiteSpace size="lg" />
-                        <Flex className="guessList">
+                        <Flex className="guessList" onClick={() => {
+                            this.props.history.push("/matchlist/basketball-CPC")
+                        }}>
                             <Flex.Item>
                                 <CustomIcon type={require('./icon/basketball.svg')} />
                             </Flex.Item>
@@ -71,7 +75,9 @@ class guessingpage extends React.Component {
                             </Flex.Item>
                         </Flex>
                         <WhiteSpace size="lg" />
-                        <Flex className="guessList">
+                        <Flex className="guessList" onClick={() => {
+                            this.props.history.push("/matchlist/kpl-CPC")
+                        }}>
                             <Flex.Item>
                                 <img style={{height: '22px'}} src={kpl} />
                             </Flex.Item>
