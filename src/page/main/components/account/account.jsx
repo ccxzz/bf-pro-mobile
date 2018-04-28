@@ -2,8 +2,6 @@ import React from 'react';
 import { List, NavBar, WingBlank, WhiteSpace, Icon, Button } from 'antd-mobile';
 import { withRouter } from 'react-router-dom'
 import './account.less'
-import invitation from "../invitation/invitation";
-
 
 const Item = List.Item;
 const Brief = Item.Brief;
