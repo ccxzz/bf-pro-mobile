@@ -29,7 +29,9 @@ class matchlist extends React.Component {
                 >赛事</NavBar>
                 <WingBlank size="lg">
                     <WhiteSpace size="lg" />
-                    <Flex className="flex-item">
+                    <Flex onClick={() => {
+                        this.props.history.push("/matchplay/football-CPC-ycls")
+                    }} className="flex-item">
                         <Flex.Item className="flex-item-left">
                             英格兰超级联赛
                         </Flex.Item>
@@ -38,7 +40,9 @@ class matchlist extends React.Component {
                         </Flex.Item>
                     </Flex>
                     <WhiteSpace size="lg" />
-                    <Flex className="flex-item">
+                    <Flex onClick={() => {
+                        this.props.history.push("/matchplay/football-CPC-ycls")
+                    }} className="flex-item">
                         <Flex.Item className="flex-item-left">
                             英格兰超级联赛
                         </Flex.Item>
@@ -47,7 +51,9 @@ class matchlist extends React.Component {
                         </Flex.Item>
                     </Flex>
                     <WhiteSpace size="lg" />
-                    <Flex className="flex-item">
+                    <Flex onClick={() => {
+                        this.props.history.push("/matchplay/football-CPC-ycls")
+                    }} className="flex-item">
                         <Flex.Item className="flex-item-left">
                             英格兰超级联赛
                         </Flex.Item>
@@ -56,7 +62,9 @@ class matchlist extends React.Component {
                         </Flex.Item>
                     </Flex>
                     <WhiteSpace size="lg" />
-                    <Flex className="flex-item">
+                    <Flex onClick={() => {
+                        this.props.history.push("/matchplay/football-CPC-ycls")
+                    }} className="flex-item">
                         <Flex.Item className="flex-item-left">
                             英格兰超级联赛
                         </Flex.Item>
@@ -65,7 +73,9 @@ class matchlist extends React.Component {
                         </Flex.Item>
                     </Flex>
                     <WhiteSpace size="lg" />
-                    <Flex className="flex-item">
+                    <Flex onClick={() => {
+                        this.props.history.push("/matchplay/football-CPC-ycls")
+                    }} className="flex-item">
                         <Flex.Item className="flex-item-left">
                             英格兰超级联赛
                         </Flex.Item>
