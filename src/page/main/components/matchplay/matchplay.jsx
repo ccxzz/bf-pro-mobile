@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import { createForm } from 'rc-form';
 import './matchplay.less'
 
+let interTime = "";
+
 class matchplay extends React.Component {
     constructor() {
         super();
@@ -16,7 +18,7 @@ class matchplay extends React.Component {
 
     componentDidMount() {
         let self = this
-        setInterval(function () {
+        interTime = setInterval(function () {
             if (self.state.timeLeft <= 0) {
                 self.setState({
                     timeLeft: 10,
@@ -29,20 +31,8 @@ class matchplay extends React.Component {
         }, 1000)
     }
 
-    showModal = key => (e) => {
-        e.preventDefault(); // 修复 Android 上点击穿透
-        this.setState({
-            [key]: true,
-        });
-    }
-    onClose = key => () => {
-        this.setState({
-            [key]: false,
-        });
-    }
-
     componentWillUnmount() {
-
+        clearInterval(interTime)
     }
 
     componentWillMount() {
@@ -52,6 +42,18 @@ class matchplay extends React.Component {
                 required: true,
                 message: '请输入兑换数量',
             }],
+        });
+    }
+
+    showModal = key => (e) => {
+        e.preventDefault(); // 修复 Android 上点击穿透
+        this.setState({
+            [key]: true,
+        });
+    }
+    onClose = key => () => {
+        this.setState({
+            [key]: false,
         });
     }
 
@@ -121,7 +123,9 @@ class matchplay extends React.Component {
                         </Flex>
                         <WhiteSpace size="sm" />
                         <Flex className="other-play">
-                            <Flex.Item className="">
+                            <Flex.Item onClick={() => {
+                                this.props.history.push("/matchplayother/football-CPC-ycls-01")
+                            }} className="">
                                 <strong>其他玩法</strong>
                             </Flex.Item>
                         </Flex>
