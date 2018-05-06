@@ -51,7 +51,7 @@ class accounthistory extends React.Component {
                             <div>11</div>
                         </Flex.Item>
                         <Flex.Item>
-                            <div className="text-v">赢</div>
+                            <div className="text-v">2.3</div>
                         </Flex.Item>
                     </Flex>
                     <Flex>
@@ -66,7 +66,7 @@ class accounthistory extends React.Component {
                             <div>11</div>
                         </Flex.Item>
                         <Flex.Item>
-                            <div className="text-l">输</div>
+                            <div className="text-l">222</div>
                         </Flex.Item>
                     </Flex>
                     <Flex>
@@ -81,7 +81,7 @@ class accounthistory extends React.Component {
                             <div>11</div>
                         </Flex.Item>
                         <Flex.Item>
-                            <div className="text-l">输</div>
+                            <div className="text-l">111</div>
                         </Flex.Item>
                     </Flex>
                     <Flex>

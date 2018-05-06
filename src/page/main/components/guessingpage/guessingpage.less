@@ -1,4 +1,16 @@
 .guessingpage {
+  .am-button::before{
+    content: none!important;
+  }
+  .buy-jc {
+    display: inline;
+    background: orange;
+    padding: 2px 5px;
+    border: none;
+    font-size: 12px;
+    border-radius: 2px;
+    color: #fff;
+  }
   .am-flexbox {
     background: #503f32;
     padding: 10px;
@@ -28,4 +40,23 @@
 }
 .guessingpage.bg-white{
   background: #fff;
+}
+.buy-cj-modal {
+  .am-list-body div:not(:last-child) .am-list-line,
+  .am-list-line,
+  .am-list-body {
+    border: none;
+  }
+  .am-list-line::after,
+  .am-list-body::after,
+  .am-list-body::before {
+    content: none!important;
+  }
+  .am-list-item {
+    border: 1px solid #ececec;
+  }
+}
+.buy-cj-modal .btn-ok{
+  background: orange;
+  color: #fff;
 }
